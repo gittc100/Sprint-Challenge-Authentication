@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+nav a, button{
+  color: #61dafb;
+  text-decoration: none;
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+nav a:hover, button:hover{
+  color: #282c34;
+  background-color: #61dafb;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.form{
+  /* background: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  /* border: 1px solid red; */
+  margin-top: 10px;
+}
+
+.formBTN{
+  margin-top: 10px;
+  color: #282c34;
+  border-color: #282c34;
+}
+
+
+.jokesMainContainer{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.jokesContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  flex-wrap: wrap;
+}
+
+.jokes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  width: 30%;
+  margin-bottom: 15px;
+  background-color: #282c34;
+  border-radius: 20px;
+  color: #61dafb;
+  padding: 10px;
+}
+
+.jokes p{
+  margin-top: 0;
+}

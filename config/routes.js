@@ -1,4 +1,3 @@
-
 const axios = require("axios");
 const bcrypt = require("bcryptjs");
 const { authenticate, generateToken } = require("../auth/authenticate");
@@ -23,13 +22,12 @@ function login(req, res) {
   const creds = req.body;
   console.log(creds);
   db("users")
-    .where({ username: creds.username }).first()
+    .where({ username: creds.username })
+    .first()
     .then(user => {
-      
       if (user && bcrypt.compareSync(creds.password, user.password)) {
-        console.log({user: user});
         const token = generateToken(user);
-        console.log({token: token});
+        console.log('logged in');
         res.status(200).json({ token: token });
       } else {
         res.status(401).json({ message: "you shall not pass!!" });
@@ -40,7 +38,9 @@ function login(req, res) {
 
 function getJokes(req, res) {
   const requestOptions = {
-    headers: { accept: "application/json" }
+    headers: {
+      accept: "application/json"
+    }
   };
   axios
     .get("https://icanhazdadjoke.com/search", requestOptions)
