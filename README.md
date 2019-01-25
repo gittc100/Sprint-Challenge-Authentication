@@ -30,7 +30,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What is the purpose of using _sessions_?
 
-Sesions provide data persistence across http requests. 
+Sessions provide data persistence across http requests. 
 
 1. What does bcrypt do to help us store passwords in a secure manner.
 
